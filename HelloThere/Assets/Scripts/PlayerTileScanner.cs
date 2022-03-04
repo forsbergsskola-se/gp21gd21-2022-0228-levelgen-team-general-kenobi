@@ -7,12 +7,12 @@ public class PlayerTileScanner : MonoBehaviour
 
     [SerializeField] private float scanningFrequency;
     [SerializeField] private float searchRadius;
-    
+
     private Transform playerTransform;
     private float scanDelay;
-    
-    
-    
+
+
+
     void Start()
     {
         scanDelay = 1 / scanningFrequency;
@@ -29,9 +29,9 @@ public class PlayerTileScanner : MonoBehaviour
         {
             if (Physics.Raycast(playerTransform.position, Vector3.down, out RaycastHit hit))
             {
-                throw new System.Exception("This is not fully implemented yet! Stop adding unfinished stuffs.");
-                // var tile = hit.collider.gameObject.GetComponent<"TILETYPENAMEHERE">()
-                var tile = "";
+                // throw new System.Exception("This is not fully implemented yet! Stop adding unfinished stuffs.");
+                var tile = hit.collider.gameObject.GetComponent<KenobiTile>();
+
                 if (tile == null)
                 {
                     throw new System.Exception("WHAT DID YOU COLLIDE WITH THAT ISN*T A TILE YOU MADMAN!");
