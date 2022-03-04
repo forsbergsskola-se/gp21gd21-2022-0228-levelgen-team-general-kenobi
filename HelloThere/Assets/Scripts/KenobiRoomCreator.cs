@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RoomCreator : MonoBehaviour
+public class KenobiRoomCreator : MonoBehaviour
 {
     [SerializeField] private GameObject kenobiRoomPrefab;
     [SerializeField] private int kenobiRoomSize;
@@ -14,7 +14,7 @@ public class RoomCreator : MonoBehaviour
     }
 
     private Vector3 KenobiTileToWorldPosition(Vector2Int kenobiTilePosition) {
-        var temp = kenobiTilePosition * kenobiRoomSize;
-        return new Vector3(temp.x, 0, temp.y);
+        var kenobo = kenobiTilePosition * kenobiRoomSize;
+        return new Vector3(kenobo.x, 0, kenobo.y);
     }
 }
