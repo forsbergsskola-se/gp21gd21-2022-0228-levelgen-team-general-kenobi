@@ -17,12 +17,12 @@ public class PlayerKenobiTileScanner : MonoBehaviour
         kenobiScanDelay = 1 / kenobiScanningFrequency;
         playerKenobiTransform = gameObject.transform;
 
-        StartCoroutine(UpdateCurrentTileOnTimer());
+        StartCoroutine(UpdateCurrentKenobiTileOnTimer());
     }
 
 
 
-    private IEnumerator UpdateCurrentTileOnTimer()
+    private IEnumerator UpdateCurrentKenobiTileOnTimer()
     {
         while (true)
         {
