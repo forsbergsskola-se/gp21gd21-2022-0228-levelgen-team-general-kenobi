@@ -88,6 +88,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6009713983291384766}
     m_Modifications:
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[0].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[1].weight
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[0].KenobiTilePrefab
+      value: 
+      objectReference: {fileID: 3913118297064781728, guid: fc9c01ef557718a428d02d7c2c0a2884, type: 3}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[1].KenobiTilePrefab
+      value: 
+      objectReference: {fileID: 3913118297064781728, guid: 34c4459019ea41f4f8acc5e1ef816d34, type: 3}
     - target: {fileID: 5840627788367636179, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
       propertyPath: m_Name
       value: GameObject

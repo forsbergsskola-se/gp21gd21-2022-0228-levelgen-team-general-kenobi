@@ -1,10 +1,18 @@
 using UnityEngine;
 
+[System.Serializable]
+public class KenobiTileEntry
+{
+    public GameObject KenobiTilePrefab;
+    public float weight;
+}
+
 public class KenobiRoomCreator : MonoBehaviour
 {
     [SerializeField] private GameObject kenobiRoomPrefab;
     [SerializeField] private int kenobiRoomSize;
 
+    [SerializeField] private KenobiTileEntry[] kenobiTilePool;
 
 
     public KenobiTile CreateNewKenobiRoom(Vector2Int spawnPosition)
