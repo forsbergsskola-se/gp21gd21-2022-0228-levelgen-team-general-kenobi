@@ -10,7 +10,9 @@ public class KenobiRoomCreator : MonoBehaviour
     public KenobiTile CreateNewKenobiRoom(Vector2Int spawnPosition)
     {
         var kenobiApartment = Instantiate(kenobiRoomPrefab, KenobiTileToWorldPosition(spawnPosition), Quaternion.identity);
-        return kenobiApartment.GetComponent<KenobiTile>();
+        var kenobiTile = kenobiApartment.GetComponent<KenobiTile>();
+        kenobiTile.KenobiTilePosition = spawnPosition;
+        return kenobiTile;
     }
 
     private Vector3 KenobiTileToWorldPosition(Vector2Int kenobiTilePosition) {
