@@ -21,7 +21,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
 
     public CallScan callScan;
 
-    void Start()
+    void Awake()
     {
         kenobiScanDelay = 1 / kenobiScanningFrequency;
         playerKenobiTransform = gameObject.transform;
@@ -29,15 +29,16 @@ public class PlayerKenobiTileScanner : MonoBehaviour
         StartCoroutine(UpdateCurrentKenobiTileOnTimer());
     }
 
-    
+
 
 
     private IEnumerator UpdateCurrentKenobiTileOnTimer()
     {
         while (true)
         {
-            if (Physics.Raycast(playerKenobiTransform.position, Vector3.down, out RaycastHit kenobiHit))
+            if (Physics.Raycast(playerKenobiTransform.position, Vector3.down, out RaycastHit kenobiHit, 30, LayerMask.GetMask("Ground")))
             {
+                Debug.Log(kenobiHit.collider.gameObject.name);
                 var kenobiTile = kenobiHit.collider.gameObject.GetComponent<KenobiTile>();
 
                 if (kenobiTile == null)
