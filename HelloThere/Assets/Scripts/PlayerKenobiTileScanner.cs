@@ -1,9 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class CallScan : UnityEvent<Vector2Int>
+{
+}
+
+
 
 public class PlayerKenobiTileScanner : MonoBehaviour
 {
-    [HideInInspector] public GameObject CurrentKenobiTile;
+    [HideInInspector] private KenobiTile currentKenobiTile;
 
     [SerializeField] private float kenobiScanningFrequency;
 
@@ -11,6 +19,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
     private float kenobiScanDelay;
 
 
+    public CallScan callScan;
 
     void Start()
     {
@@ -20,6 +29,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
         StartCoroutine(UpdateCurrentKenobiTileOnTimer());
     }
 
+    
 
 
     private IEnumerator UpdateCurrentKenobiTileOnTimer()
@@ -35,7 +45,11 @@ public class PlayerKenobiTileScanner : MonoBehaviour
                     throw new System.Exception("WHAT DID YOU COLLIDE WITH THAT ISN'T A TILE! SO UNCIVILIZED!");
                 }
 
-                CurrentKenobiTile = kenobiHit.collider.gameObject;
+                if (!kenobiTile.Visited)
+                {
+                    callScan.Invoke(kenobiTile.KenobiTilePosition);
+                    kenobiTile.Visited = true;
+                }
             }
 
             yield return new WaitForSeconds(kenobiScanDelay);

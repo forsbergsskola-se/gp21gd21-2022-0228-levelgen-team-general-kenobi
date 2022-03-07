@@ -15,6 +15,6 @@ public class KenobiRoomCreator : MonoBehaviour
 
     private Vector3 KenobiTileToWorldPosition(Vector2Int kenobiTilePosition) {
         var kenobo = kenobiTilePosition * kenobiRoomSize;
-        return new Vector3(kenobo.x, 0, kenobo.y);
+        return new Vector3(kenobo.x, -5, kenobo.y);
     }
 }
