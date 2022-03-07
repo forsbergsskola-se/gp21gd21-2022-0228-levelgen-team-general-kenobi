@@ -22,6 +22,7 @@ public class KenobiRoomCreator : MonoBehaviour
 
 
     private GameObject[] KenobiTileReferences;
+    private Quaternion[] KenobiRoations = new Quaternion[4];
 
     private void Start()
     {
@@ -48,22 +49,29 @@ public class KenobiRoomCreator : MonoBehaviour
             KenobiTileReferences[i] = kenobiEntry.KenobiTilePrefab;
             searchWeight++;
         }
+
+        var rotation = Quaternion.identity;
+        for (int i = 0; i < KenobiRoations.Length; i++) {
+            KenobiRoations[i] = rotation;
+            rotation *= Quaternion.Euler(0,90,0);
+        }
     }
 
-    
+
 
     public KenobiTile CreateNewKenobiRoom(Vector2Int spawnPosition)
     {
         int randomInt = Random.Range(0, KenobiTileReferences.Length);
-        var kenobiApartment = Instantiate(KenobiTileReferences[randomInt], KenobiTileToWorldPosition(spawnPosition), Quaternion.identity);
+        var randomRotations = Random.Range(0, 4);
+        var kenobiApartment = Instantiate(KenobiTileReferences[randomInt], KenobiTileToWorldPosition(spawnPosition), KenobiRoations[randomRotations]);
         var kenobiTile = kenobiApartment.GetComponent<KenobiTile>();
         kenobiTile.KenobiTilePosition = spawnPosition;
         return kenobiTile;
     }
 
-    
 
-    private Vector3 KenobiTileToWorldPosition(Vector2Int kenobiTilePosition) 
+
+    private Vector3 KenobiTileToWorldPosition(Vector2Int kenobiTilePosition)
     {
         var kenobo = kenobiTilePosition * kenobiRoomSize;
         return new Vector3(kenobo.x, 0, kenobo.y);
