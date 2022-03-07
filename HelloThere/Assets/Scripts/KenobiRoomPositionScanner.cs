@@ -17,7 +17,7 @@ public class KenobiRoomPositionScanner : MonoBehaviour
 
     public void Scan(Vector2Int centerKenobiPoint)
     {
-        Debug.Log("Scanning");
+        // Debug.Log("Scanning");
         Vector2Int kenobiSearchPosition = centerKenobiPoint + Vector2Int.up * 2 + Vector2Int.right * 2;
         foreach (var kenobisDirectional in kenobisDirections)
         {

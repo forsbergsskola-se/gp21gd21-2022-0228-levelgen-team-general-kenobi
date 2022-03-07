@@ -98,6 +98,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
       propertyPath: kenobiTilePool.Array.data[1].weight
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[2].weight
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
@@ -106,6 +110,10 @@ PrefabInstance:
       objectReference: {fileID: 3913118297064781728, guid: fc9c01ef557718a428d02d7c2c0a2884, type: 3}
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
       propertyPath: kenobiTilePool.Array.data[1].KenobiTilePrefab
+      value: 
+      objectReference: {fileID: 3913118297064781728, guid: 34c4459019ea41f4f8acc5e1ef816d34, type: 3}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: kenobiTilePool.Array.data[2].KenobiTilePrefab
       value: 
       objectReference: {fileID: 3913118297064781728, guid: 34c4459019ea41f4f8acc5e1ef816d34, type: 3}
     - target: {fileID: 5840627788367636179, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}

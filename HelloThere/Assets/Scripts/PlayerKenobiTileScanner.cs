@@ -11,7 +11,7 @@ public class CallScan : UnityEvent<Vector2Int>
 
 public class PlayerKenobiTileScanner : MonoBehaviour
 {
-    [HideInInspector] private KenobiTile currentKenobiTile;
+    private KenobiTile currentKenobiTile;
 
     [SerializeField] private float kenobiScanningFrequency;
 
@@ -38,7 +38,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
         {
             if (Physics.Raycast(playerKenobiTransform.position, Vector3.down, out RaycastHit kenobiHit, 30, LayerMask.GetMask("Ground")))
             {
-                Debug.Log(kenobiHit.collider.gameObject.name);
+                // Debug.Log(kenobiHit.collider.gameObject.name);
                 var kenobiTile = kenobiHit.collider.gameObject.GetComponent<KenobiTile>();
 
                 if (kenobiTile == null)
