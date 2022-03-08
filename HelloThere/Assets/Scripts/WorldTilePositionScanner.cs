@@ -9,7 +9,7 @@ using UnityEngine;
 public class WorldTilePositionScanner : MonoBehaviour
 {
     private readonly Vector2Int[] worldTileDirections = { Vector2Int.down, Vector2Int.left, Vector2Int.up, Vector2Int.right };
-    private readonly Dictionary<Vector2Int, WorldTile> loadedWorldTiles = new Dictionary<Vector2Int, WorldTile>();
+    [HideInInspector] public readonly Dictionary<Vector2Int, WorldTile> loadedWorldTiles = new Dictionary<Vector2Int, WorldTile>();
     private WorldTileCreator worldTileCreator;
 
 
@@ -36,7 +36,7 @@ public class WorldTilePositionScanner : MonoBehaviour
                 searchPosition += directionVector;
                 if (!loadedWorldTiles.ContainsKey(searchPosition))
                 {
-                    loadedWorldTiles.Add(searchPosition, worldTileCreator.CreateNewWorldTile(searchPosition));
+                    worldTileCreator.CreateNewWorldTile(searchPosition);
                 }
             }
         }

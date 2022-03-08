@@ -22,12 +22,12 @@ public class WorldTileCreator : MonoBehaviour
 {
     [SerializeField] private int worldTileSizes;
     [SerializeField] private WorldTileEntry[] worldTilePool;
-    
+
     private GameObject[] worldTileReferences;
     private Quaternion[] worldTileRotations;
 
-    
-    
+
+
     private void Start()
     {
         worldTileReferences = GetWorldTileReferences();
@@ -53,15 +53,15 @@ public class WorldTileCreator : MonoBehaviour
         return result;
     }
 
-    
-    
+
+
     /// <summary>
     /// Creates an array of references to world tile prefabs with different amounts of references based on weight.
     /// </summary>
     /// <returns></returns>
     private GameObject[] GetWorldTileReferences()
     {
-        
+
         var totalWeight = 0;
         foreach (var worldTileEntry in worldTilePool)
         {
@@ -104,14 +104,14 @@ public class WorldTileCreator : MonoBehaviour
         var newWorldTileClass = newWorldTile.GetComponent<WorldTile>();
         newWorldTileClass.WorldTilePosition = spawnPosition;
 
-        var randomBool = Random.Range(0, 3);
-        if (randomBool == 1)
+        var randomFlip = Random.Range(0, 3);
+        if (randomFlip == 1)
         {
             var transformLocalScale = newWorldTile.transform.localScale;
             transformLocalScale.x *= -1;
             newWorldTile.transform.localScale = transformLocalScale;
         }
-        if (randomBool == 2)
+        if (randomFlip == 2)
         {
             var transformLocalScale = newWorldTile.transform.localScale;
             transformLocalScale.z *= -1;
