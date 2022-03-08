@@ -89,7 +89,23 @@ PrefabInstance:
     m_TransformParent: {fileID: 6009713983291384766}
     m_Modifications:
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTileSizes
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTilePool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
       propertyPath: kenobiTilePool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTilePool.Array.data[0].weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTilePool.Array.data[1].weight
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
@@ -104,6 +120,14 @@ PrefabInstance:
       propertyPath: kenobiTilePool.Array.data[2].weight
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTilePool.Array.data[0].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 3913118297064781728, guid: 34c4459019ea41f4f8acc5e1ef816d34, type: 3}
+    - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
+      propertyPath: worldTilePool.Array.data[1].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 3913118297064781728, guid: fc9c01ef557718a428d02d7c2c0a2884, type: 3}
     - target: {fileID: 5840627788367636177, guid: ee695d39595895d47bfb5a6ee87d4530, type: 3}
       propertyPath: kenobiTilePool.Array.data[0].KenobiTilePrefab
       value: 
@@ -185,16 +209,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 6009713983291384766}
     m_Modifications:
     - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: updateFrequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
       propertyPath: kenobiScanningFrequency
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8218948541845161905}
     - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
       propertyPath: callScan.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8218948541845161905}
     - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Scan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
       propertyPath: callScan.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Scan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WorldTilePositionScanner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4076503384953755048, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
+      propertyPath: CallScan.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4076503384953755049, guid: 0b257b85a1324934e9841be2375f396e, type: 3}
       propertyPath: m_RootOrder

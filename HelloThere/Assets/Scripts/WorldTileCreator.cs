@@ -44,7 +44,7 @@ public class WorldTileCreator : MonoBehaviour
     {
         var result = new Quaternion[4];
         var rotation = Quaternion.identity;
-        for (var i = 0; i < worldTileRotations.Length; i++)
+        for (var i = 0; i < 4; i++)
         {
             result[i] = rotation;
             rotation *= Quaternion.Euler(0,90,0);
