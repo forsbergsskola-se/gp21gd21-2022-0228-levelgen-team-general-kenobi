@@ -11,7 +11,7 @@ public class CallScan : UnityEvent<Vector2Int>
 
 public class PlayerKenobiTileScanner : MonoBehaviour
 {
-    private KenobiTile currentKenobiTile;
+    private WorldTile currentWorldTile;
 
     [SerializeField] private float kenobiScanningFrequency;
 
@@ -39,7 +39,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
             if (Physics.Raycast(playerKenobiTransform.position, Vector3.down, out RaycastHit kenobiHit, 30, LayerMask.GetMask("Ground")))
             {
                 // Debug.Log(kenobiHit.collider.gameObject.name);
-                var kenobiTile = kenobiHit.collider.gameObject.GetComponent<KenobiTile>();
+                var kenobiTile = kenobiHit.collider.gameObject.GetComponent<WorldTile>();
 
                 if (kenobiTile == null)
                 {
@@ -48,7 +48,7 @@ public class PlayerKenobiTileScanner : MonoBehaviour
 
                 if (!kenobiTile.Visited)
                 {
-                    callScan.Invoke(kenobiTile.KenobiTilePosition);
+                    callScan.Invoke(kenobiTile.WorldTilePosition);
                     kenobiTile.Visited = true;
                 }
             }

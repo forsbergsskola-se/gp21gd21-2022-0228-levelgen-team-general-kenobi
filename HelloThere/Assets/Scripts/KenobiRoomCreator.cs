@@ -60,13 +60,13 @@ public class KenobiRoomCreator : MonoBehaviour
 
 
 
-    public KenobiTile CreateNewKenobiRoom(Vector2Int spawnPosition)
+    public WorldTile CreateNewKenobiRoom(Vector2Int spawnPosition)
     {
         int randomInt = Random.Range(0, KenobiTileReferences.Length);
         var randomRotations = Random.Range(0, 0);
         var kenobiApartment = Instantiate(KenobiTileReferences[randomInt], KenobiTileToWorldPosition(spawnPosition), KenobiRoations[randomRotations]);
-        var kenobiTile = kenobiApartment.GetComponent<KenobiTile>();
-        kenobiTile.KenobiTilePosition = spawnPosition;
+        var kenobiTile = kenobiApartment.GetComponent<WorldTile>();
+        kenobiTile.WorldTilePosition = spawnPosition;
 
         var randomBool = Random.Range(0, 3);
         if (randomBool == 1)

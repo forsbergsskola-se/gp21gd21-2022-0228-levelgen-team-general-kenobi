@@ -4,7 +4,7 @@ using UnityEngine;
 public class KenobiRoomPositionScanner : MonoBehaviour
 {
     private readonly Vector2Int[] kenobisDirections = { Vector2Int.down, Vector2Int.left, Vector2Int.up, Vector2Int.right };
-    private Dictionary<Vector2Int, KenobiTile> loadedKenobiTiles = new Dictionary<Vector2Int, KenobiTile>();
+    private Dictionary<Vector2Int, WorldTile> loadedKenobiTiles = new Dictionary<Vector2Int, WorldTile>();
     private KenobiRoomCreator kenobiKenobiRoomCreator;
 
 
