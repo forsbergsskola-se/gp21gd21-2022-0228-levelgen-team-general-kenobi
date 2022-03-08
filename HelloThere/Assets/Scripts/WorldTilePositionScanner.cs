@@ -10,13 +10,13 @@ public class WorldTilePositionScanner : MonoBehaviour
 {
     private readonly Vector2Int[] worldTileDirections = { Vector2Int.down, Vector2Int.left, Vector2Int.up, Vector2Int.right };
     private readonly Dictionary<Vector2Int, WorldTile> loadedWorldTiles = new Dictionary<Vector2Int, WorldTile>();
-    private KenobiRoomCreator kenobiKenobiRoomCreator;
+    private WorldTileCreator kenobiWorldTileCreator;
 
 
 
     private void Awake() 
     {
-        kenobiKenobiRoomCreator = GetComponent<KenobiRoomCreator>();
+        kenobiWorldTileCreator = GetComponent<WorldTileCreator>();
     }
 
     
@@ -36,7 +36,7 @@ public class WorldTilePositionScanner : MonoBehaviour
                 searchPosition += directionVector;
                 if (!loadedWorldTiles.ContainsKey(searchPosition))
                 {
-                    loadedWorldTiles.Add(searchPosition, kenobiKenobiRoomCreator.CreateNewKenobiRoom(searchPosition));
+                    loadedWorldTiles.Add(searchPosition, kenobiWorldTileCreator.CreateNewWorldTile(searchPosition));
                 }
             }
         }
