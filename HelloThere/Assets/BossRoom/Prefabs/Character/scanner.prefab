@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4076503384953755049}
   - component: {fileID: 4076503384953755048}
   - component: {fileID: 4076503384953755050}
+  - component: {fileID: 3820326622266790094}
   m_Layer: 0
   m_Name: scanner
   m_TagString: Untagged
@@ -44,12 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edb50d14667ce64eb55096aa864fc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kenobiScanningFrequency: 1
-  callScan:
+  CallScan:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: KenobiRoomPositionScanner, Assembly-CSharp
+        m_TargetAssemblyTypeName: WorldTilePositionScanner, Assembly-CSharp
         m_MethodName: Scan
         m_Mode: 0
         m_Arguments:
@@ -60,6 +60,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  updateFrequency: 2
 --- !u!114 &4076503384953755050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +75,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Tracked: {fileID: 0}
   m_Size: {x: 80, y: 20, z: 80}
+--- !u!114 &3820326622266790094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076503384953755063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc984e56d4976984496d2f5f49c99f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

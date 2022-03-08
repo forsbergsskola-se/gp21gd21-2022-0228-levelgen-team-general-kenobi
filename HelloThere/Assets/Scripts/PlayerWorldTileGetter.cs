@@ -20,15 +20,15 @@ public class CallScan : UnityEvent<Vector2Int>
 public class PlayerWorldTileGetter : MonoBehaviour
 {
     public CallScan CallScan;
-    
+
     [SerializeField] private float updateFrequency;
-    
+
     private WorldTile currentWorldTile;
     private Transform playerTransform;
     private float waitDelay;
-    
 
-    
+
+
     void Awake()
     {
         waitDelay = 1 / updateFrequency;
@@ -36,9 +36,9 @@ public class PlayerWorldTileGetter : MonoBehaviour
 
         StartCoroutine(FindCurrentWorldTileOnTimer());
     }
-    
 
-    
+
+
     /// <summary>
     /// Runs as many times a second as updateFrequency, every time checking which tile the player is on, invoking the
     /// callScan event if the player enters a new tile.
@@ -47,6 +47,7 @@ public class PlayerWorldTileGetter : MonoBehaviour
     /// <exception cref="Exception"></exception>
     private IEnumerator FindCurrentWorldTileOnTimer()
     {
+        yield return new WaitForSeconds(waitDelay);
         while (true)
         {
             if (Physics.Raycast(playerTransform.position, Vector3.down, out RaycastHit hit, 30, LayerMask.GetMask("Ground")))
@@ -65,7 +66,6 @@ public class PlayerWorldTileGetter : MonoBehaviour
                     worldTile.Visited = true;
                 }
             }
-
             yield return new WaitForSeconds(waitDelay);
         }
     }
