@@ -25,8 +25,12 @@ public class DecorationSpawner : MonoBehaviour
             var spawnableTile = SpawnableTiles[randomIndex];
             var spawnPosition = spawnableTile.GetComponent<Renderer>().bounds.center;
 
-            spawnPosition.y =+ 1;
-            var enemy = Instantiate(decorationPrefab, spawnPosition, Quaternion.identity);
+            //Decoration goes under ground if not set
+            spawnPosition.y = 0.0f;
+
+            var vectorOffset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+
+            var enemy = Instantiate(decorationPrefab, spawnPosition + vectorOffset, Quaternion.Euler(0, Random.Range(0f, 360f), 0 ));
             enemy.GetComponent<NetworkObject>().Spawn();
 
             SpawnableTiles.Remove(spawnableTile);
