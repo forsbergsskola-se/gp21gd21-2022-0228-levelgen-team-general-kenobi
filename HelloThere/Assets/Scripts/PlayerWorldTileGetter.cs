@@ -27,8 +27,6 @@ public class PlayerWorldTileGetter : MonoBehaviour
     private Transform playerTransform;
     private float waitDelay;
 
-
-
     void Awake()
     {
         waitDelay = 1 / updateFrequency;
@@ -36,8 +34,6 @@ public class PlayerWorldTileGetter : MonoBehaviour
 
         StartCoroutine(FindCurrentWorldTileOnTimer());
     }
-
-
 
     /// <summary>
     /// Runs as many times a second as updateFrequency, every time checking which tile the player is on, invoking the
@@ -52,12 +48,11 @@ public class PlayerWorldTileGetter : MonoBehaviour
         {
             if (Physics.Raycast(playerTransform.position, Vector3.down, out RaycastHit hit, 30, LayerMask.GetMask("Ground")))
             {
-                // Debug.Log(kenobiHit.collider.gameObject.name);
                 var worldTile = hit.collider.gameObject.GetComponent<WorldTile>();
 
                 if (worldTile == null)
                 {
-                    throw new System.Exception("WHAT DID YOU COLLIDE WITH THAT ISN'T A WORLD-TILE! SO UNCIVILIZED!");
+                    throw new System.Exception("No world tile detected below player");
                 }
 
                 if (!worldTile.Visited)
@@ -66,6 +61,7 @@ public class PlayerWorldTileGetter : MonoBehaviour
                     worldTile.Visited = true;
                 }
             }
+
             yield return new WaitForSeconds(waitDelay);
         }
     }
