@@ -2,15 +2,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 
-
-
 /// <summary>
 /// Unity event to call scanning at specified position.
 /// </summary>
 [System.Serializable]
-public class CallScan : UnityEvent<Vector2Int>
-{
-}
+public class CallScan : UnityEvent<Vector2Int>{}
 
 
 

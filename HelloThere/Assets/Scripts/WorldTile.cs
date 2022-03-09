@@ -1,7 +1,5 @@
 using UnityEngine;
 
-
-
 public class WorldTile : MonoBehaviour
 {
     [SerializeField] public int TotalEnemies;
