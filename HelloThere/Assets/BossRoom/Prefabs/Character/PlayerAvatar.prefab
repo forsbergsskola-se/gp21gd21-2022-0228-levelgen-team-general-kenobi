@@ -169,13 +169,41 @@ PrefabInstance:
       value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[0].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[1].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[2].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[3].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[0].WorldTilePrefab
       value: 
       objectReference: {fileID: 2003384102799572359, guid: c18e7121056f29e4f8c688977f5c79a1, type: 3}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[1].WorldTilePrefab
       value: 
+      objectReference: {fileID: 2003384102799572359, guid: 0111ab85bed09e2428fa6b46d448c3c9, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[2].WorldTilePrefab
+      value: 
       objectReference: {fileID: 2003384102799572359, guid: 58f862b2c1c563a4ca5ec35b90115d40, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[3].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 1846621357790617613, guid: bf26b5703c1a548cd97810ef41af2b4b, type: 3}
     - target: {fileID: 8481021778752354791, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: m_Name
       value: LevelGenerator

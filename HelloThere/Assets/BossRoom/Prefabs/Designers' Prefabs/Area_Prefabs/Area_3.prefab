@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2556771560282253770}
   - component: {fileID: 1523182688397202961}
   - component: {fileID: -5836826905857075765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Area_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7322d110a95af1c47a23b608418263b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TotalEnemies: 0
   WorldTilePosition: {x: 0, y: 0}
   Visited: 0
 --- !u!1001 &8806840315816302734
