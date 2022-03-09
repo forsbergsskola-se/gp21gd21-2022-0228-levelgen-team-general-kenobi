@@ -164,6 +164,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6009713983291384766}
     m_Modifications:
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTileSizes
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[0].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: c18e7121056f29e4f8c688977f5c79a1, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[1].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: 58f862b2c1c563a4ca5ec35b90115d40, type: 3}
     - target: {fileID: 8481021778752354791, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: m_Name
       value: LevelGenerator

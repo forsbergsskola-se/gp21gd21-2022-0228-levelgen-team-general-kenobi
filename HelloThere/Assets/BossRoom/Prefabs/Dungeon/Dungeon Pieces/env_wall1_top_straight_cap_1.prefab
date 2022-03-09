@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2698721903467665021}
   - component: {fileID: 3792955485091636975}
   - component: {fileID: 2036526519701997008}
+  - component: {fileID: -8354302760869624588}
   m_Layer: 8
   m_Name: env_wall1_top_straight_cap_1
   m_TagString: Untagged
@@ -81,3 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &-8354302760869624588
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759726440798291530}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 2.0730002, z: 2}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.927, z: 2}
+  m_TimeToStationary: 0.5
