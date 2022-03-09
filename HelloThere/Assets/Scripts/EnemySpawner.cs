@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private int maxEnemies;
     [HideInInspector] public List<GameObject> SpawnableTiles = new List<GameObject>();
-    
+
     public void Start()
     {
         SpawnEnemies();
@@ -20,8 +20,8 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < maxEnemies; i++)
         {
             if (SpawnableTiles.Count == 0)
-                throw new System.Exception($"No more available spawn tiles! {i} out of {maxEnemies} spawned successfully.");
-            
+                throw new System.Exception($"No more available spawn tiles! {i} out of {maxEnemies} enemies spawned successfully.");
+
             var randomIndex = Random.Range(0, SpawnableTiles.Count);
             var spawnableTile = SpawnableTiles[randomIndex];
             var spawnPosition = spawnableTile.GetComponent<Renderer>().bounds.center;
