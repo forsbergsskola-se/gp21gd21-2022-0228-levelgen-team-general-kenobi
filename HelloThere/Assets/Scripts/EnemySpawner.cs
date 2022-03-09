@@ -6,13 +6,12 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private int maxEnemies;
-    public List<GameObject> SpawnableTiles = new List<GameObject>();
-
-    [SerializeField] private GameObject EnemyPrefab;
+    [HideInInspector] public List<GameObject> SpawnableTiles = new List<GameObject>();
+    
     public void Start()
     {
-
         SpawnEnemies();
     }
 
@@ -28,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
             var spawnPosition = spawnableTile.GetComponent<Renderer>().bounds.center;
 
             spawnPosition.y =+ 1;
-            var enemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
+            var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
             enemy.GetComponent<NetworkObject>().Spawn();
 
             SpawnableTiles.Remove(spawnableTile);
