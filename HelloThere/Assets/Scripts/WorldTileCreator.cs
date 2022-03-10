@@ -66,16 +66,16 @@ public class WorldTileCreator : MonoBehaviour
         var searchWeight = 0;
         for (var i = 0; i < totalWeight; i++)
         {
-            var kenobiEntry = worldTilePool[poolIndex];
+            var worldTileEntry = worldTilePool[poolIndex];
 
-            if (searchWeight >= kenobiEntry.weight)
+            if (searchWeight >= worldTileEntry.weight)
             {
                 poolIndex++;
                 searchWeight = 0;
-                kenobiEntry = worldTilePool[poolIndex];
+                worldTileEntry = worldTilePool[poolIndex];
             }
 
-            result[i] = kenobiEntry.WorldTilePrefab;
+            result[i] = worldTileEntry.WorldTilePrefab;
             searchWeight++;
         }
 

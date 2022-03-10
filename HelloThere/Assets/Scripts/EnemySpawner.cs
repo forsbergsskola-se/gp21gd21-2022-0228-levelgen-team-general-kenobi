@@ -4,16 +4,73 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
+public struct SpawnableEnemy
+{
+    public GameObject EnemyPrefab;
+    public int SpawnWeight;
+}
+
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private SpawnableEnemy[] spawnableEnemies;
     [SerializeField] private int maxEnemies;
     [HideInInspector] public List<GameObject> SpawnableTiles = new List<GameObject>();
 
+    [SerializeField] private float progressionMultiplier;
+    [SerializeField] private int randomizerBlockSize;
+
+    private int lowRange;
+    private int highRange;
+    private GameObject[] enemyPrefabReferences;
+    
+    
     public void Start()
     {
-        SpawnEnemies();
+        // enemyPrefabReferences = GetEnemyPrefabReferences();
+        //
+        // lowRange = -randomizerBlockSize;
+        // highRange = 0;
+        //
+        // SpawnEnemies();
     }
+
+
+    
+    /// <summary>
+    /// Returns an array of references to prefabs based on weight;
+    /// </summary>
+    /// <returns></returns>
+    private GameObject[] GetEnemyPrefabReferences()
+    {
+        var totalWeight = 0;
+        foreach (var spawnableEnemy in spawnableEnemies)
+        {
+            totalWeight += spawnableEnemy.SpawnWeight;
+        }
+
+        var result = new GameObject[totalWeight];
+
+        var poolIndex = 0;
+        var searchWeight = 0;
+        for (var i = 0; i < totalWeight; i++)
+        {
+            var spawnableEnemy = spawnableEnemies[poolIndex];
+
+            if (searchWeight >= spawnableEnemy.SpawnWeight)
+            {
+                poolIndex++;
+                searchWeight = 0;
+                spawnableEnemy = spawnableEnemies[poolIndex];
+            }
+
+            result[i] = spawnableEnemy.EnemyPrefab;
+            searchWeight++;
+        }
+
+        return result;
+    }
+    
+    
 
     void SpawnEnemies()
     {
@@ -27,8 +84,8 @@ public class EnemySpawner : MonoBehaviour
             var spawnPosition = spawnableTile.GetComponent<Renderer>().bounds.center;
 
             spawnPosition.y =+ 1;
-            var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-            enemy.GetComponent<NetworkObject>().Spawn();
+            // var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            // enemy.GetComponent<NetworkObject>().Spawn();
 
             SpawnableTiles.Remove(spawnableTile);
         }
