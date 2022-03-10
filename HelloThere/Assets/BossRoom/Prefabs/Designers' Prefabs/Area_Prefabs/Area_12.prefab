@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2556771560282253770}
   - component: {fileID: -1009148901788198711}
   - component: {fileID: -9062120792515574072}
+  - component: {fileID: -1331922372245119781}
+  - component: {fileID: 5154808813640370370}
   m_Layer: 8
   m_Name: Area_12
   m_TagString: Untagged
@@ -59,9 +61,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7322d110a95af1c47a23b608418263b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalEnemies: 0
   WorldTilePosition: {x: 0, y: 0}
   Visited: 0
+--- !u!114 &-1331922372245119781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003384102799572359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e49fecc13748f39aead56656b69eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorationPrefab: {fileID: 884761565141663561, guid: 5640f51641faec24ca0d332b154499bf, type: 3}
+  maxDecorations: 0
+  SpawnableTiles: []
+--- !u!114 &5154808813640370370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003384102799572359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb33fd229c093c847a714a11e5eec907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnableEnemies:
+  - EnemyPrefab: {fileID: 3713729372785093424, guid: 6cdd52f1fa2ed34469a487ae6477eded, type: 3}
+    SpawnWeight: 20
+  - EnemyPrefab: {fileID: 3713729372785093424, guid: 7c66e1e48f2174c53a14c41e397a383e, type: 3}
+    SpawnWeight: 20
+  - EnemyPrefab: {fileID: 3713729372785093424, guid: 5d398b9b5efb144e58886351953e8770, type: 3}
+    SpawnWeight: 20
+  maxEnemies: 0
+  SpawnableTiles: []
+  progressionMultiplier: 0.5
+  randomizerBlockSize: 30
 --- !u!1001 &8806840315816302734
 PrefabInstance:
   m_ObjectHideFlags: 0
