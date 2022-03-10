@@ -99,7 +99,7 @@ MonoBehaviour:
     SpawnWeight: 20
   maxEnemies: 0
   SpawnableTiles: []
-  progressionMultiplier: 0.5
+  progressionMultiplier: 1.5
   randomizerBlockSize: 30
 --- !u!1001 &8806840315816302734
 PrefabInstance:
