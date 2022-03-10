@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private SpawnableEnemy[] spawnableEnemies;
     [SerializeField] private int maxEnemies;
     [HideInInspector] public List<GameObject> SpawnableTiles = new List<GameObject>();
-    
+
     [SerializeField] private float progressionMultiplier;
     [SerializeField] private int randomizerBlockSize;
 
@@ -86,7 +86,7 @@ public class EnemySpawner : MonoBehaviour
             var randomEnemyIndex = Random.Range(lowRange, highRange);
             randomEnemyIndex = (int) Mathf.Clamp(randomEnemyIndex + worldTileCreator.spawnedRooms * progressionMultiplier, 0, enemyPrefabReferences.Length - 1);
 
-            var enemy = Instantiate(enemyPrefabReferences[randomEnemyIndex], spawnPosition, Quaternion.identity);
+            var enemy = Instantiate(enemyPrefabReferences[randomEnemyIndex], spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0 ));
             enemy.GetComponent<NetworkObject>().Spawn();
 
             SpawnableTiles.Remove(spawnableTile);
