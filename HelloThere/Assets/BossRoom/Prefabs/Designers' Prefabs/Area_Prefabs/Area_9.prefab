@@ -240,9 +240,9 @@ MonoBehaviour:
     SpawnWeight: 10
   - EnemyPrefab: {fileID: 3713729372785093424, guid: 5d398b9b5efb144e58886351953e8770, type: 3}
     SpawnWeight: 5
-  maxEnemies: 25
+  maxEnemies: 5
   SpawnableTiles: []
-  progressionMultiplier: 0.5
+  progressionMultiplier: 1
   randomizerBlockSize: 30
 --- !u!1 &2416855125174726196
 GameObject:
