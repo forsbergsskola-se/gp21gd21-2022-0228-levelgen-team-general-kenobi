@@ -2619,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6088058988579923003, guid: 4e8bd4962790c8142ac06150a37418de, type: 3}
       propertyPath: CanSpawnDecoration
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6858229082375244730, guid: 4e8bd4962790c8142ac06150a37418de, type: 3}
       propertyPath: m_Name
