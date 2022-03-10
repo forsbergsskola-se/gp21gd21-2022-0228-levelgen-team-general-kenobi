@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private SpawnableEnemy[] spawnableEnemies;
     [SerializeField] private int maxEnemies;
     [HideInInspector] public List<GameObject> SpawnableTiles = new List<GameObject>();
-
+    
     [SerializeField] private float progressionMultiplier;
     [SerializeField] private int randomizerBlockSize;
 
@@ -24,34 +24,19 @@ public class EnemySpawner : MonoBehaviour
     private int highRange;
     private GameObject[] enemyPrefabReferences;
     private WorldTileCreator worldTileCreator;
-    
-    
-    
-    // TODO: THIS IS TEMPORARY FOR TESTING PURPOSES! 
-    // #################################################################################################################
-    // #################################################################################################################
-    public int spawnedRooms;
-    // #################################################################################################################
-    // #################################################################################################################
-    
-    
-    
-    
-    
+
     public void Start()
     {
         enemyPrefabReferences = GetEnemyPrefabReferences();
-        
+
         lowRange = -randomizerBlockSize;
         highRange = 0;
 
         worldTileCreator = FindObjectOfType<WorldTileCreator>();
-        
+
         SpawnEnemies();
     }
 
-
-    
     /// <summary>
     /// Returns an array of references to prefabs based on weight;
     /// </summary>
@@ -85,8 +70,6 @@ public class EnemySpawner : MonoBehaviour
 
         return result;
     }
-    
-    
 
     void SpawnEnemies()
     {
@@ -101,19 +84,8 @@ public class EnemySpawner : MonoBehaviour
 
             spawnPosition.y =+ 1;
             var randomEnemyIndex = Random.Range(lowRange, highRange);
-            // randomEnemyIndex = (int) Mathf.Clamp(randomEnemyIndex + worldTileCreator.spawnedRooms * progressionMultiplier, 0, enemyPrefabReferences.Length);
-            
-            
-            
-            // TODO: THIS IS TEMPORARY FOR TESTING PURPOSES! Remove this and enable row 104 again!
-            // #################################################################################################################
-            // #################################################################################################################
-            randomEnemyIndex = (int) Mathf.Clamp(randomEnemyIndex + spawnedRooms * progressionMultiplier, 0, enemyPrefabReferences.Length);
-            // #################################################################################################################
-            // #################################################################################################################
+            randomEnemyIndex = (int) Mathf.Clamp(randomEnemyIndex + worldTileCreator.spawnedRooms * progressionMultiplier, 0, enemyPrefabReferences.Length - 1);
 
-            
-            
             var enemy = Instantiate(enemyPrefabReferences[randomEnemyIndex], spawnPosition, Quaternion.identity);
             enemy.GetComponent<NetworkObject>().Spawn();
 
