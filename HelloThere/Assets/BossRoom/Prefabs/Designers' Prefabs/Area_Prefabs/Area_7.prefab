@@ -141,7 +141,7 @@ MonoBehaviour:
     SpawnWeight: 5
   maxEnemies: 22
   SpawnableTiles: []
-  progressionMultiplier: 0.5
+  progressionMultiplier: 1
   randomizerBlockSize: 30
 --- !u!1 &3475670201249940816
 GameObject:
