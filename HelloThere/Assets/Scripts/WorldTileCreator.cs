@@ -90,26 +90,26 @@ public class WorldTileCreator : MonoBehaviour
     public WorldTile CreateNewWorldTile(Vector2Int spawnPosition)
     {
         int randomInt = Random.Range(0, worldTileReferences.Length);
-        var randomRotations = Random.Range(0, 0);
+        var randomRotations = Random.Range(0, 4);
         var newWorldTile = Instantiate(worldTileReferences[randomInt], WorldTilePositionToGameWorldPosition(spawnPosition), worldTileRotations[randomRotations]);
         var newWorldTileClass = newWorldTile.GetComponent<WorldTile>();
         newWorldTileClass.WorldTilePosition = spawnPosition;
 
-        var randomFlip = Random.Range(0, 3);
-
-        if (randomFlip == 1)
-        {
-            var transformLocalScale = newWorldTile.transform.localScale;
-            transformLocalScale.x *= -1;
-            newWorldTile.transform.localScale = transformLocalScale;
-        }
-
-        if (randomFlip == 2)
-        {
-            var transformLocalScale = newWorldTile.transform.localScale;
-            transformLocalScale.z *= -1;
-            newWorldTile.transform.localScale = transformLocalScale;
-        }
+        // var randomFlip = Random.Range(0, 3);
+        //
+        // if (randomFlip == 1)
+        // {
+        //     var transformLocalScale = newWorldTile.transform.localScale;
+        //     transformLocalScale.x *= -1;
+        //     newWorldTile.transform.localScale = transformLocalScale;
+        // }
+        //
+        // if (randomFlip == 2)
+        // {
+        //     var transformLocalScale = newWorldTile.transform.localScale;
+        //     transformLocalScale.z *= -1;
+        //     newWorldTile.transform.localScale = transformLocalScale;
+        // }
 
         return newWorldTileClass;
     }
