@@ -34,6 +34,8 @@ namespace Unity.Multiplayer.Samples.BossRoom
         RogueStealthMode,
         ArcherVolley,
         RogueDashAttack,
+        ImpYellowAttack,
+        ImpRedAttack,
     }
 
 

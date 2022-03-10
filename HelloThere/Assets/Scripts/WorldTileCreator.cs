@@ -21,6 +21,8 @@ public class WorldTileCreator : MonoBehaviour
     [SerializeField] private int worldTileSizes;
     [SerializeField] private WorldTileEntry[] worldTilePool;
 
+    [HideInInspector] public int spawnedRooms = 0;
+    
     private GameObject[] worldTileReferences;
     private Quaternion[] worldTileRotations;
 
@@ -111,6 +113,7 @@ public class WorldTileCreator : MonoBehaviour
         //     newWorldTile.transform.localScale = transformLocalScale;
         // }
 
+        spawnedRooms++;
         return newWorldTileClass;
     }
 

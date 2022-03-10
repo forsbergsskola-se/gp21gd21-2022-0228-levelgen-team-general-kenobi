@@ -170,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.size
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[0].weight
@@ -186,6 +186,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[3].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[4].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[5].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[6].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[7].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[8].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[9].weight
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
@@ -199,9 +223,33 @@ PrefabInstance:
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[2].WorldTilePrefab
       value: 
-      objectReference: {fileID: 2003384102799572359, guid: 58f862b2c1c563a4ca5ec35b90115d40, type: 3}
+      objectReference: {fileID: 2003384102799572359, guid: 0639a189278b123408feecf5d9a0340d, type: 3}
     - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
       propertyPath: worldTilePool.Array.data[3].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: 58f862b2c1c563a4ca5ec35b90115d40, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[4].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: d4c1b4a13e2743c4193b059ca4685e3d, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[5].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: 5c68a0cc407953f469870786fe1debd3, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[6].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2003384102799572359, guid: d0bcf8285d834144f8b0269a2d4b1eee, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[7].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 2243385857298008276, guid: 76a0626bf01d646adaeaa523f563b09d, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[8].WorldTilePrefab
+      value: 
+      objectReference: {fileID: 1846621357790617613, guid: bf26b5703c1a548cd97810ef41af2b4b, type: 3}
+    - target: {fileID: 8481021778752354789, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
+      propertyPath: worldTilePool.Array.data[9].WorldTilePrefab
       value: 
       objectReference: {fileID: 1846621357790617613, guid: bf26b5703c1a548cd97810ef41af2b4b, type: 3}
     - target: {fileID: 8481021778752354791, guid: f0c57a93fa93ac94d899c658fb60a325, type: 3}
