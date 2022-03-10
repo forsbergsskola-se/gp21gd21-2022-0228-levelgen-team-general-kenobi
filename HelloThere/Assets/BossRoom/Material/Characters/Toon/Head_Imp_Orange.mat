@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Head_Imp_Yellow
+  m_Name: Head_Imp_Orange
   m_Shader: {fileID: -6465566751694194690, guid: 317f1cf71d2fc30458456d44f39763d2, type: 3}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: affc89fd9d0fb4384b4279bc65c40091, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0b6936cc9e12148a8b692a9197bce512, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
