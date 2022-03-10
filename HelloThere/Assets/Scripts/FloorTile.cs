@@ -1,26 +1,36 @@
 using System;
 using UnityEngine;
 
-
 public class FloorTile : MonoBehaviour
 {
-    public bool Spawnable;
+    public bool CanSpawnEnemy;
+    public bool CanSpawnDecoration;
 
     private void Awake()
     {
-        if (Spawnable)
+        if (CanSpawnEnemy)
         {
             transform.parent.parent.GetComponent<EnemySpawner>().SpawnableTiles.Add(gameObject);
+        }
 
-            // Debug.Log(transform.parent.parent.name);
+        if (CanSpawnDecoration)
+        {
+            transform.parent.parent.GetComponent<DecorationSpawner>().SpawnableTiles.Add(gameObject);
         }
     }
 
     private void OnDrawGizmos()
     {
-        if (Spawnable)
+        if (CanSpawnEnemy)
         {
-            Gizmos.DrawSphere(gameObject.GetComponent<Renderer>().bounds.center, 1);
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(gameObject.GetComponent<Renderer>().bounds.center, 1.5f);
+        }
+
+        if (CanSpawnDecoration)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawCube(gameObject.GetComponent<Renderer>().bounds.center, new Vector3(1, 2, 1));
         }
     }
 }

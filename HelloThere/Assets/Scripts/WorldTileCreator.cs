@@ -1,8 +1,6 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-
-
 /// <summary>
 /// Holds one WorldTile prefab and it's weight.
 /// </summary>
@@ -26,15 +24,11 @@ public class WorldTileCreator : MonoBehaviour
     private GameObject[] worldTileReferences;
     private Quaternion[] worldTileRotations;
 
-
-
     private void Start()
     {
         worldTileReferences = GetWorldTileReferences();
         worldTileRotations = GetWorldTileRotations();
     }
-
-
 
     /// <summary>
     /// Calculates and places all four 90 degree rotations into an array and returns it.
@@ -44,6 +38,7 @@ public class WorldTileCreator : MonoBehaviour
     {
         var result = new Quaternion[4];
         var rotation = Quaternion.identity;
+
         for (var i = 0; i < 4; i++)
         {
             result[i] = rotation;
@@ -53,15 +48,12 @@ public class WorldTileCreator : MonoBehaviour
         return result;
     }
 
-
-
     /// <summary>
     /// Creates an array of references to world tile prefabs with different amounts of references based on weight.
     /// </summary>
     /// <returns></returns>
     private GameObject[] GetWorldTileReferences()
     {
-
         var totalWeight = 0;
         foreach (var worldTileEntry in worldTilePool)
         {
@@ -75,6 +67,7 @@ public class WorldTileCreator : MonoBehaviour
         for (var i = 0; i < totalWeight; i++)
         {
             var kenobiEntry = worldTilePool[poolIndex];
+
             if (searchWeight >= kenobiEntry.weight)
             {
                 poolIndex++;
@@ -88,8 +81,6 @@ public class WorldTileCreator : MonoBehaviour
 
         return result;
     }
-
-
 
     /// <summary>
     /// Create a new random world tile at the provided world tile position.
@@ -105,12 +96,14 @@ public class WorldTileCreator : MonoBehaviour
         newWorldTileClass.WorldTilePosition = spawnPosition;
 
         var randomFlip = Random.Range(0, 3);
+
         if (randomFlip == 1)
         {
             var transformLocalScale = newWorldTile.transform.localScale;
             transformLocalScale.x *= -1;
             newWorldTile.transform.localScale = transformLocalScale;
         }
+
         if (randomFlip == 2)
         {
             var transformLocalScale = newWorldTile.transform.localScale;
@@ -120,8 +113,6 @@ public class WorldTileCreator : MonoBehaviour
 
         return newWorldTileClass;
     }
-
-
 
     /// <summary>
     /// Translates a world tile position to game world coordinates.
