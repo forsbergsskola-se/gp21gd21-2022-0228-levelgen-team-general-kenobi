@@ -83,10 +83,13 @@ public class EnemySpawner : MonoBehaviour
             var spawnPosition = spawnableTile.GetComponent<Renderer>().bounds.center;
 
             spawnPosition.y =+ 1;
+            
+            var vectorOffset = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f));
+            
             var randomEnemyIndex = Random.Range(lowRange, highRange);
             randomEnemyIndex = (int) Mathf.Clamp(randomEnemyIndex + worldTileCreator.spawnedRooms * progressionMultiplier, 0, enemyPrefabReferences.Length - 1);
 
-            var enemy = Instantiate(enemyPrefabReferences[randomEnemyIndex], spawnPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0 ));
+            var enemy = Instantiate(enemyPrefabReferences[randomEnemyIndex], spawnPosition + vectorOffset, Quaternion.Euler(0, Random.Range(0f, 360f), 0 ));
             enemy.GetComponent<NetworkObject>().Spawn();
 
             SpawnableTiles.Remove(spawnableTile);
