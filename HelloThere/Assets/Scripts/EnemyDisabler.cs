@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyDisabler : MonoBehaviour
 {
-    private const float maxDistance = 20;
+    private const float maxDistance = 25;
     private Transform playerTransform;
     
     
