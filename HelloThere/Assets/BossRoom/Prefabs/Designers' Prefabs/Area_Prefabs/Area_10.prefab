@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decorationPrefab: {fileID: 884761565141663561, guid: 5640f51641faec24ca0d332b154499bf, type: 3}
-  maxDecorations: 20
+  maxDecorations: 12
   SpawnableTiles: []
 --- !u!114 &-4361235245959059107
 MonoBehaviour:
