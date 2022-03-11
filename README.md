@@ -1,21 +1,17 @@
-# {game-title}
+# GAME TITLE: HELLO THERE
 
-{video}
+A Procedurally Generated Roguelike Dungeon Crawler
 
-{description}
 
-## Team Name
+## TEAM: GENERAL KENOBI
 
-{team members and roles}
+### Game Designers
+Erick Vaghi
+Jack Fors Ahlberg
+Petter Söderberg
 
-Feel free to link any existing Linked.in Profiles or Portfolio Websites.
-
-## Design Documents
-
-{gdd}
-
-{tdd}
-
-{art-bible}
-
-## Media
+### Game Programmers
+Benjamin Ting
+Jasmine Ohlin
+Johannes Danielsson
+Oskar Anderson
