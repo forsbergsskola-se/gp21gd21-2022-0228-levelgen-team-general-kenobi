@@ -40,6 +40,6 @@ An Infinite Procedurally Generated Roguelike Dungeon Crawler
 
 ### Game Programmers
 - Benjamin Ting
-- Jasmine Ohlin
+- Jasmine Öhlin
 - Johannes Danielsson
 - Oskar Anderson
